@@ -11,9 +11,9 @@ const {
 
 const todoRouter = express.Router();
 
-todoRouter.get("/todos", getAllTodo);
+todoRouter.get("/todos", getAllTodo); //this works fine
 
-todoRouter.get("/todo", getTodoById);
+todoRouter.get("/todo", getTodoById); //this works fine but naming could change
 
 todoRouter.get("/todos/completed", getCompletedTodos);
 

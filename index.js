@@ -1,19 +1,23 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const morgan = require ("morgan");
 
-require("../db");
+dotenv.config();
+require("./db");
 
 const app = express();
+app.use(express.json());
 
 const todoRouter = require("./routers/routes/todos");
+
 app.use(todoRouter);
 
 app.use(cors);
-app.use(express.json());
+
 app.use(morgan("dev"));
 
-dotenv.config();
+
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
