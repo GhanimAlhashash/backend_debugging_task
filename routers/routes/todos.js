@@ -21,7 +21,7 @@ todoRouter.post("/todos", createTodo);
 
 todoRouter.put("/todos/:id", completeTodo);
 
-todoRouter.put("/todo", updateTodo);
+todoRouter.put("/todo/:id", updateTodo);
 
 todoRouter.delete("/delete/:id", deleteTodo);
 
